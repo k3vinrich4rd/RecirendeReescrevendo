@@ -1,2 +1,4 @@
-package com.example.miniProjetoRecirende.repository;public interface IUsuarioRepository {
+package com.example.miniProjetoRecirende.repository;
+
+public interface IUsuarioRepository {
 }
