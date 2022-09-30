@@ -1,2 +1,4 @@
-package com.example.miniProjetoRecirende.model;public class UsuarioModel {
+package com.example.miniProjetoRecirende.model;
+
+public class UsuarioModel {
 }
