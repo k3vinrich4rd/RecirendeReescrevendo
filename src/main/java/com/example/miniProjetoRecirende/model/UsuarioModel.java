@@ -1,5 +1,6 @@
 package com.example.miniProjetoRecirende.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -50,4 +53,8 @@ public class UsuarioModel implements Serializable {
     @Column(name = "ponto_usuario")
     private Integer pontosUsuario = 0;
 
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "usuarioModel", cascade = CascadeType.ALL)
+    private List<EmbalagemSalgadinhoModel> embalagemSalgadinhoModels = new ArrayList<>();
 }
