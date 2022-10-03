@@ -8,6 +8,7 @@ import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,6 +28,10 @@ public class EmbalagemSalgadinhoModel implements Serializable {
     @Length(max = 9, message = "Erro, o campo 'numero de serie embalagem' deve conter no maximo 9 digitos")
     @Length(min = 9, message = "Erro, o campo 'numero de serie embalagem' deve conte no minimo 9 digitos")
     private String numeroDeSerieEmbalagem;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
+    private UsuarioModel usuarioModel;
 
 
 }
