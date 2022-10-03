@@ -6,4 +6,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<UsuarioModel, Long> {
+
+    //Validações(Query method)
+    public boolean existsByCpfDoUsuario(String cpfDoUsuario);
+
+    public boolean existsByEmailDoUsuario(String emailDoUsuario);
+
+    public boolean existsByTelefoneDoUsuario(String telefoneDoUsuario);
+
 }
