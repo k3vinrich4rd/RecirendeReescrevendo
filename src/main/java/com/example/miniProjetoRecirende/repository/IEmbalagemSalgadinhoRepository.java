@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IEmbalagemSalgadinhoRepository extends JpaRepository<EmbalagemSalgadinhoModel, Long> {
+
+    public boolean existsByNumeroDeSerieEmbalagem(String numeroDeSerieEmbalagem);
 }
