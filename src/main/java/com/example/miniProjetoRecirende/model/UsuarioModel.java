@@ -30,7 +30,7 @@ public class UsuarioModel implements Serializable {
 
     @Column(name = "data_de_nascimento_usuario", length = 10)
     @NotNull(message = "Erro: o campo 'data de nascimento' não foi informado")
-    private LocalDate dataDeNascimento;
+    private LocalDate dataDeNascimentoUsuario;
 
     @Column(name = "cpf_usuario", length = 14, nullable = false)
     @CPF(message = "Erro, 'cpf' inválido")
@@ -43,10 +43,9 @@ public class UsuarioModel implements Serializable {
     private String emailDoUsuario;
 
     @Column(name = "telefone_usuario", nullable = false)
-    @Length(max = 10, message = "Erro, o campo 'telefone' deve conter no maximo 12 digitos")
+    @Length(max = 12, message = "Erro, o campo 'telefone' deve conter no maximo 12 digitos")
     @Length(min = 9, message = "Erro, o campo 'telefone' deve conte no minimo 9 digitos")
-    @NotBlank(message = "Erro, campo 'telefone' não informado")
-    private String telefone;
+    private String telefoneDoUsuario;
 
     @Column(name = "ponto_usuario")
     private Integer pontosUsuario = 0;
