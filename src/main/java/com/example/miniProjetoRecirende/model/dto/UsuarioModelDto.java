@@ -23,9 +23,9 @@ public class UsuarioModelDto implements Serializable {
     public UsuarioModelDto(UsuarioModel obj) {
         this.id = obj.getId();
         this.nomeUsuario = obj.getNomeUsuario();
-        this.dataDeNascimento = obj.getDataDeNascimento();
+        this.dataDeNascimento = obj.getDataDeNascimentoUsuario();
         this.emailDoUsuario = obj.getEmailDoUsuario();
-        this.telefone = obj.getTelefone();
+        this.telefone = obj.getTelefoneDoUsuario();
         this.pontosUsuario = obj.getPontosUsuario();
     }
 }
